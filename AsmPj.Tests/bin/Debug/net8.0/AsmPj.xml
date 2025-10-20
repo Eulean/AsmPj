@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AsmPj</name>
+    </assembly>
+    <members>
+        <member name="T:AsmPj.Controllers.AuthController">
+            <summary>
+            Handles user authentication including registration and login.
+            </summary>
+        </member>
+        <member name="M:AsmPj.Controllers.AuthController.Register(AsmPj.Models.Dtos.RegisterRequest)">
+            <summary>
+            Register a new user.
+            </summary>
+            <param name="request">User registration data (Name , Email , Password ,Role)</param>
+            <returns>Success or Error Message</returns>
+        </member>
+        <member name="M:AsmPj.Controllers.AuthController.Login(AsmPj.Models.Dtos.LoginRequest)">
+            <summary>
+            Authenticate a user and generate a JWT token.
+            </summary>
+            <param name="request">Login credentials (Email, Password)</param>
+            <returns>JWT token with user role and email</returns>
+        </member>
+        <member name="T:AsmPj.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AsmPj.Migrations.AddIndexs">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.AddIndexs.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.AddIndexs.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.AddIndexs.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AsmPj.Migrations.SeedInitialData">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.SeedInitialData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.SeedInitialData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.SeedInitialData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AsmPj.Migrations.AddBoardsAndTasks">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.AddBoardsAndTasks.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.AddBoardsAndTasks.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.AddBoardsAndTasks.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AsmPj.Migrations.FixBoardIDNull">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.FixBoardIDNull.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.FixBoardIDNull.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.FixBoardIDNull.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AsmPj.Migrations.UpdateUserRoleMapping">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.UpdateUserRoleMapping.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.UpdateUserRoleMapping.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.UpdateUserRoleMapping.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AsmPj.Migrations.FixMappingRoleUser">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.FixMappingRoleUser.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.FixMappingRoleUser.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.FixMappingRoleUser.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AsmPj.Migrations.updateDbContext">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.updateDbContext.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.updateDbContext.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.updateDbContext.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
