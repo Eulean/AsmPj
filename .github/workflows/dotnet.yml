@@ -1,6 +1,5 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
 name: .NET CI
 
 on:
@@ -14,25 +13,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: 🧱 Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+      - name: ⚙️ Setup .NET
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.0 # your .NET version
+          dotnet-version: 8.0.x # or your version (e.g., 7.0.x)
 
-      - name: Restore dependencies
+      - name: 📦 Restore dependencies
         run: dotnet restore
 
-      - name: Build
+      - name: 🏗️ Build
         run: dotnet build --no-restore --configuration Release
 
-      - name: Run tests
+      - name: 🧪 Run unit tests
         run: dotnet test --no-build --configuration Release --verbosity normal
 
-      # Optional: Collect code coverage
-      - name: Run tests with coverage
+      # ✅ Optional: Collect and upload coverage report
+      - name: 🧾 Run tests with coverage
         run: |
           dotnet test \
             --no-build \
@@ -41,9 +40,8 @@ jobs:
             /p:CoverletOutputFormat=cobertura \
             /p:CoverletOutput=./TestResults/coverage.xml
 
-      # Optional: Upload coverage report to GitHub
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v3
+      - name: 📤 Upload coverage report
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: ./TestResults/coverage.xml
