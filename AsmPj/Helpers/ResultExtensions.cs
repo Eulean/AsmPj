@@ -2,13 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AsmPj.Helpers;
 
-public static class ResultExtensions
+public static class ResultExtensions 
 {
     public static IActionResult ToActionResult<T>(this Result<T> result)
     {
         if (result.IsSuccess)
         {
-            return new ObjectResult(new
+            return new ObjectResult(new 
             {
                 success = true,
                 data = result.Value

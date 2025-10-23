@@ -82,7 +82,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 
-builder.Services.AddScoped<JwtService>();
+builder.Services.AddScoped<IJwtService ,JwtService>();
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUserContext, UserContext>();

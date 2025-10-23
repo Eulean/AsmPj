@@ -2,6 +2,7 @@ using AsmPj.Data;
 using AsmPj.Helpers;
 using AsmPj.Models;
 using AsmPj.Models.Dtos;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 namespace AsmPj.Services;
@@ -9,14 +10,16 @@ namespace AsmPj.Services;
 public class AuthService : IAuthService
 {
     private readonly MyDbContext _context;
-    private readonly JwtService _jwtService;
+    private readonly IJwtService _jwtService;
     private readonly ILogger _logger;
+    private readonly IMapper _mapper;
     
-    public AuthService(MyDbContext context, JwtService jwtService, ILogger<AuthService> logger)
+    public AuthService(MyDbContext context, IJwtService jwtService, ILogger<AuthService> logger, IMapper mapper)
     {
         _context = context;
         _jwtService = jwtService;
         _logger = logger;
+        _mapper = mapper;
     }
 
     public async Task<Result<string>> RegisterAsync(RegisterRequest request)
