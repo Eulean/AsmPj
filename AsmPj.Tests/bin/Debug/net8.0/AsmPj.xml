@@ -23,6 +23,104 @@
             <param name="request">Login credentials (Email, Password)</param>
             <returns>JWT token with user role and email</returns>
         </member>
+        <member name="T:AsmPj.Controllers.BoardController">
+            <summary>
+                Handle Board Management (Create, Get My Boards, Update, Delete)
+            </summary>
+        </member>
+        <member name="M:AsmPj.Controllers.BoardController.CreateBoard(AsmPj.Models.Dtos.CreateBoardRequest)">
+            <summary>
+                Create a new board.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsmPj.Controllers.BoardController.GetMyBoards">
+            <summary>
+                Get all boards of the authenticated user.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsmPj.Controllers.BoardController.UpdateBoard(System.Int32,AsmPj.Models.Dtos.UpdateBoardRequest)">
+            <summary>
+                Update an existing board.
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsmPj.Controllers.BoardController.DeleteBoard(System.Int32)">
+            <summary>
+                Delete a board.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsmPj.Controllers.TaskController">
+            <summary>
+                Handle Task Management (Create, Get Tasks by Board, Update, Delete)
+            </summary>
+        </member>
+        <member name="M:AsmPj.Controllers.TaskController.CreateTask(AsmPj.Models.Dtos.TaskRequest)">
+            <summary>
+                Create a new task.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsmPj.Controllers.TaskController.GetTasksByBoard(System.Int32)">
+            <summary>
+                Get all tasks by board ID.
+            </summary>
+            <param name="boardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsmPj.Controllers.TaskController.UpdateTask(System.Int32,AsmPj.Models.Dtos.TaskRequest)">
+            <summary>
+                Update an existing task.
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsmPj.Controllers.TaskController.DeleteTask(System.Int32)">
+            <summary>
+                Delete a task.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsmPj.Controllers.UserController">
+            <summary>
+                Handle User Mangement (Get All Users, Get My Profile, Activate/Deactivate User)
+            </summary>
+        </member>
+        <member name="M:AsmPj.Controllers.UserController.GetAllUsers(System.Int32,System.Int32)">
+            <summary>
+                Get all users (Admin only)
+            </summary>
+            <returns>Success or Error message</returns>
+        </member>
+        <member name="M:AsmPj.Controllers.UserController.GetMyProfile">
+            <summary>
+                Get My Profile
+            </summary>
+            <returns>Success</returns>
+        </member>
+        <member name="M:AsmPj.Controllers.UserController.DeactivateUser(System.Int32)">
+            <summary>
+                Deactivate a user (Admin only)
+            </summary>
+            <param name="id">Deactivate User (userid) </param>
+            <returns>Success or ErrorMessage</returns>
+        </member>
+        <member name="M:AsmPj.Controllers.UserController.ActivateUser(System.Int32)">
+            <summary>
+                Activate a user (Admin only)
+            </summary>
+            <param name="id">Activate User (userid)</param>
+            <returns>Success or ErrorMessage</returns>
+        </member>
         <member name="T:AsmPj.Migrations.InitialCreate">
             <inheritdoc />
         </member>
@@ -117,6 +215,30 @@
             <inheritdoc />
         </member>
         <member name="M:AsmPj.Migrations.updateDbContext.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AsmPj.Migrations.AddedActivityLogs">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.AddedActivityLogs.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.AddedActivityLogs.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.AddedActivityLogs.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:AsmPj.Migrations.fixModels">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.fixModels.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.fixModels.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AsmPj.Migrations.fixModels.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

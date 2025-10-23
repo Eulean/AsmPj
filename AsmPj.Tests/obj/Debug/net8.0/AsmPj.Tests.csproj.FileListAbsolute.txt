@@ -149,3 +149,7 @@ D:\asmpj\AsmPj.Tests\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\asmpj\AsmPj.Tests\bin\Debug\net8.0\AsmPj.dll
 D:\asmpj\AsmPj.Tests\bin\Debug\net8.0\AsmPj.pdb
 D:\asmpj\AsmPj.Tests\bin\Debug\net8.0\AsmPj.xml
+D:\asmpj\AsmPj.Tests\bin\Debug\net8.0\Castle.Core.dll
+D:\asmpj\AsmPj.Tests\bin\Debug\net8.0\FluentAssertions.dll
+D:\asmpj\AsmPj.Tests\bin\Debug\net8.0\Moq.dll
+D:\asmpj\AsmPj.Tests\obj\Debug\net8.0\AsmPj.Tests.sourcelink.json
