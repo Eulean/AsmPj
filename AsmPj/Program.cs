@@ -116,6 +116,16 @@ builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<MyDbContext>();
+    // Run migrations only if needed (no duplicate seeding)
+    if (db.Database.GetPendingMigrations().Any())
+    {
+        db.Database.Migrate();
+    }
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
